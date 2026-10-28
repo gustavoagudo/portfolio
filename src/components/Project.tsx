@@ -81,10 +81,8 @@ export function Project() {
       <div className="h-pin">
         <div className="h-track">
           <div className="h-panel intro">
-            <div className="label" data-reveal>
-              <span>04</span> Projeto em destaque
-            </div>
-            <h2 className="giant">{PROJECT.title}</h2>
+            <h2 className="label">Projeto em destaque</h2>
+            <p className="giant">{PROJECT.title}</p>
             <p className="role">{PROJECT.tagline}</p>
             <p className="lead">{PROJECT.summary}</p>
             <Magnetic>
@@ -95,7 +93,9 @@ export function Project() {
           </div>
           {PROJECT.features.map((f, i) => (
             <div className="h-panel feat" key={f.title}>
-              <span className="feat-n">0{i + 1} / 03</span>
+              <span className="feat-n">
+                {i + 1} de {PROJECT.features.length}
+              </span>
               <h3>{f.title}</h3>
               <p>{f.text}</p>
               <div className="visual">{VISUALS[i]}</div>

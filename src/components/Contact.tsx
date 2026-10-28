@@ -46,10 +46,10 @@ export function Contact() {
 
   return (
     <section id="contato" ref={root} className="section contact">
-      <div className="label" data-reveal>
-        <span>05</span> Contato
-      </div>
-      <Split as="h2" chars className="contact-title" text={CONTACT_TITLE} />
+      <h2 className="label" data-reveal>
+        Contato
+      </h2>
+      <Split as="p" chars className="contact-title" text={CONTACT_TITLE} />
       <div className="big-links">
         {LINKS.map((l) => (
           <Magnetic key={l.label} strength={0.2}>

@@ -90,13 +90,8 @@ export function NetworkCanvas() {
         const B = nodes[p.b]
         const x = A.x + (B.x - A.x) * p.t
         const y = A.y + (B.y - A.y) * p.t
-        const g = ctx.createRadialGradient(x, y, 0, x, y, 12)
-        g.addColorStop(0, 'rgba(61,255,168,.95)')
-        g.addColorStop(1, 'rgba(61,255,168,0)')
-        ctx.fillStyle = g
-        ctx.beginPath()
-        ctx.arc(x, y, 12, 0, Math.PI * 2)
-        ctx.fill()
+        ctx.fillStyle = '#3dffa8'
+        ctx.fillRect(x - 3.5, y - 3.5, 7, 7)
       }
       if (!reduced && packets.length < 9 && Math.random() < 0.06) spawnPacket()
     }

@@ -4,6 +4,15 @@ import { gsap, reduced } from '../lib'
 import { NetworkCanvas } from './NetworkCanvas'
 import { Split } from './Split'
 
+// Decorative request log; the shapes are typical of the work, the numbers are not real measurements.
+const LOG = [
+  'POST /propostas → 201 Created · 42ms',
+  'GET /bancos/03/status → 200 OK · 38ms',
+  'PATCH /propostas/{id} → 200 OK · 51ms',
+  'POST /bancos/07/contratar → 202 Accepted · 97ms',
+  'GET /comparacao → 200 OK · 64ms',
+]
+
 export function Hero({ ready }: { ready: boolean }) {
   const root = useRef<HTMLElement>(null)
   const intro = useRef<gsap.core.Timeline | null>(null)
@@ -22,13 +31,13 @@ export function Hero({ ready }: { ready: boolean }) {
         .to('.hero-fade', { opacity: 1, y: 0, duration: 1.1, stagger: 0.09 }, 0.8)
 
       gsap.to('.hero-content', {
-        yPercent: -14,
-        opacity: 0.15,
+        yPercent: -10,
+        opacity: 0.1,
         ease: 'none',
         scrollTrigger: { trigger: root.current, start: 'top top', end: 'bottom top', scrub: true },
       })
       gsap.to('.net', {
-        scale: 1.25,
+        scale: 1.2,
         ease: 'none',
         scrollTrigger: { trigger: root.current, start: 'top top', end: 'bottom top', scrub: true },
       })
@@ -43,14 +52,11 @@ export function Hero({ ready }: { ready: boolean }) {
   return (
     <section id="top" ref={root} className="hero">
       <NetworkCanvas />
-      <div className="hero-vignette" />
       <div className="hero-content">
-        <p className="eyebrow hero-fade">
-          <i className="dot" /> Full stack developer · Backend · APIs · Integrações
-        </p>
+        <p className="eyebrow hero-fade">Full stack developer · Brasil</p>
         <h1 className="hero-title" aria-label="Gustavo Agudo">
           <Split text="Gustavo" chars as="span" className="block" />
-          <Split text="Agudo" chars as="span" className="block serif" />
+          <Split text="Agudo" chars as="span" className="block indent" />
         </h1>
         <div className="hero-line" />
         <div className="hero-bottom">
@@ -69,9 +75,12 @@ export function Hero({ ready }: { ready: boolean }) {
           </dl>
         </div>
       </div>
-      <div className="scroll-hint hero-fade" aria-hidden="true">
-        <span>Role</span>
-        <i />
+      <div className="ticker hero-fade" aria-hidden="true">
+        <div className="ticker-track">
+          {[...LOG, ...LOG, ...LOG, ...LOG].map((l, i) => (
+            <span key={i}>{l}</span>
+          ))}
+        </div>
       </div>
     </section>
   )
