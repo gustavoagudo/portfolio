@@ -57,7 +57,7 @@ export function Nav({ ready }: { ready: boolean }) {
   return (
     <>
       <header ref={bar} className="nav" style={{ opacity: 0 }}>
-        <a className="nav-logo" href="#top" onClick={(e) => (e.preventDefault(), go('top'))}>
+        <a className="nav-logo notranslate" translate="no" href="#top" onClick={(e) => (e.preventDefault(), go('top'))}>
           Gustavo Agudo
         </a>
         <nav className="nav-links" aria-label="Principal">

@@ -47,7 +47,7 @@ export function Experience() {
           Experiência
         </h2>
         <div className="xp-head">
-          <p className="h2" data-reveal>
+          <p className="h2 notranslate" translate="no" data-reveal>
             {EXPERIENCE.title}
           </p>
           <div>

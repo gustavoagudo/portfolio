@@ -67,7 +67,7 @@ export function Stack() {
         {STACKS.map((s) => (
           <li key={s.name} style={{ ['--c' as string]: s.color }}>
             <StackIcon name={s.name} color={s.color} className="spec-icon" />
-            <h3>{s.name}</h3>
+            <h3 className="notranslate" translate="no">{s.name}</h3>
             <p>{s.note}</p>
           </li>
         ))}

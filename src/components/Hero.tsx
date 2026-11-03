@@ -22,11 +22,9 @@ export function Hero({ ready }: { ready: boolean }) {
     const ctx = gsap.context(() => {
       gsap.set('.hero .sc', { yPercent: 115 })
       gsap.set('.hero-fade', { opacity: 0, y: 24 })
-      gsap.set('.hero-line', { scaleX: 0 })
       intro.current = gsap
         .timeline({ paused: true, defaults: { ease: 'expo.out' } })
         .to('.hero-title .sc', { yPercent: 0, duration: 1.5, stagger: 0.045 })
-        .to('.hero-line', { scaleX: 1, duration: 1.6, ease: 'expo.inOut' }, 0.2)
         .to('.hero-lead .sc', { yPercent: 0, duration: 1.1, stagger: 0.012 }, 0.55)
         .to('.hero-fade', { opacity: 1, y: 0, duration: 1.1, stagger: 0.09 }, 0.8)
 
@@ -54,16 +52,15 @@ export function Hero({ ready }: { ready: boolean }) {
       <NetworkCanvas />
       <div className="hero-content">
         <p className="eyebrow hero-fade">Full stack developer · Brasil</p>
-        <h1 className="hero-title" aria-label="Gustavo Agudo">
+        <h1 className="hero-title notranslate" translate="no" aria-label="Gustavo Agudo">
           <Split text="Gustavo" chars as="span" className="block" />
           <Split text="Agudo" chars as="span" className="block indent" />
         </h1>
-        <div className="hero-line" />
         <div className="hero-bottom">
           <Split
             as="p"
             className="hero-lead"
-            text="Construo a camada que conversa com bancos, dados e fluxos — e faz tudo avançar sozinho."
+            text="Construo a camada que conversa com bancos, dados e fluxos, e faz tudo avançar sozinho."
           />
           <dl className="facts">
             {FACTS.map(([k, v]) => (
@@ -75,7 +72,7 @@ export function Hero({ ready }: { ready: boolean }) {
           </dl>
         </div>
       </div>
-      <div className="ticker hero-fade" aria-hidden="true">
+      <div className="ticker hero-fade notranslate" translate="no" aria-hidden="true">
         <div className="ticker-track">
           {[...LOG, ...LOG, ...LOG, ...LOG].map((l, i) => (
             <span key={i}>{l}</span>

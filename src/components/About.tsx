@@ -55,7 +55,7 @@ export function About() {
           <div className="portrait">
             <img src="/gustavo.png" alt="Retrato de Gustavo Agudo" loading="lazy" />
           </div>
-          <figcaption>Gustavo Agudo, Brasil</figcaption>
+          <figcaption translate="no">Gustavo Agudo, Brasil</figcaption>
         </figure>
         <div className="about-text">
           {ABOUT.paragraphs.map((p, i) => (

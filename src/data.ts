@@ -18,14 +18,14 @@ export const FACTS = [
   ['Cargo atual', 'Full stack developer'],
   ['Foco', 'Backend · APIs · integrações'],
   ['Setor', 'Financeiro · crédito'],
-  ['Formação', 'Ciência da Computação — último semestre'],
+  ['Formação', 'Ciência da Computação, último semestre'],
 ] as const
 
 export const ABOUT = {
   title: 'O backend é onde a responsabilidade mora.',
   paragraphs: [
     'Comecei como full stack e continuo entregando as duas pontas, mas o que me prende é o servidor: modelar o domínio, desenhar o contrato da API, decidir o que acontece quando a integração de um banco devolve um formato que ninguém documentou.',
-    'Na prática isso significa tratar erro como caminho previsto, não exceção; deixar o fluxo operacional avançando sozinho, com estado explícito e rastro de cada transição; e escrever código que o próximo desenvolvedor — inclusive eu, seis meses depois — consiga ler sem susto.',
+    'Na prática isso significa tratar erro como caminho previsto, não exceção; deixar o fluxo operacional avançando sozinho, com estado explícito e rastro de cada transição; e escrever código que o próximo desenvolvedor (inclusive eu, seis meses depois) consiga ler sem susto.',
     'Estou no último semestre de Ciência da Computação e uso a formação para o que ela serve melhor: entender o custo das decisões antes de tomá-las.',
   ],
 }
@@ -66,7 +66,7 @@ export const EXPERIENCE = {
     },
     {
       title: 'Horas economizadas por proposta',
-      text: 'Cada proposta que antes esperava conferência humana agora avança sozinha — funcionários e parceiros de negócio contratam em paralelo, sem fila.',
+      text: 'Cada proposta que antes esperava conferência humana agora avança sozinha. Funcionários e parceiros de negócio contratam em paralelo, sem fila.',
     },
     {
       title: 'Dados heterogêneos normalizados',
@@ -84,15 +84,15 @@ export const PROJECT = {
   features: [
     {
       title: 'Web scraping e coleta',
-      text: 'Rotinas de coleta resistentes a mudança de layout, com Playwright onde a página só existe depois do JavaScript.',
+      text: 'Playwright onde a página só existe depois do JavaScript. Onde o site carrega os dados de uma API REST própria, analiso as requisições do navegador, identifico o endpoint e consumo a resposta direto, que é mais limpa e quebra menos que ler o HTML.',
     },
     {
       title: 'Matching de produtos',
-      text: 'Nomes escritos de formas diferentes, embalagens em unidades diferentes, códigos ausentes — o casamento entre anúncios é o núcleo do problema.',
+      text: 'Nomes escritos de formas diferentes, embalagens em unidades diferentes, códigos ausentes. O casamento entre anúncios é o núcleo do problema.',
     },
     {
       title: 'Tratamento e exposição',
-      text: 'Dados limpos, versionados e servidos por uma API REST — a mesma disciplina de borda do CRM, em outro domínio.',
+      text: 'Dados limpos, versionados e servidos por uma API REST. É a mesma disciplina de borda do CRM, em outro domínio.',
     },
   ],
 }

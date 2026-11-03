@@ -44,7 +44,7 @@ export function Preloader({ onDone, onReveal }: { onDone: () => void; onReveal: 
   return (
     <div ref={root} className="preloader" aria-hidden="true">
       <div className="pre-inner">
-        <div className="pre-name">
+        <div className="pre-name notranslate" translate="no">
           {['GUSTAVO', 'AGUDO'].map((w, i) => (
             <span className="sw" key={i}>
               {Array.from(w).map((c, j) => (

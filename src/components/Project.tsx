@@ -5,7 +5,7 @@ import { Magnetic } from './Magnetic'
 
 // Illustrative snippets, one per feature panel (not real scraped data).
 const VISUALS = [
-  <pre key="a" className="code">
+  <pre key="a" className="code" translate="no">
     <span className="c-dim">$ collect --market all</span>
     {'\n'}
     <span className="c-ok">✓</span> render page <span className="c-dim">(playwright)</span>
@@ -14,7 +14,7 @@ const VISUALS = [
     {'\n'}
     <span className="c-ok">✓</span> prices extracted
   </pre>,
-  <div key="b" className="match">
+  <div key="b" className="match" translate="no">
     <div className="m-row">Leite Integral 1L</div>
     <div className="m-link">
       <i />
@@ -23,7 +23,7 @@ const VISUALS = [
     </div>
     <div className="m-row">LEITE INT. 1000ML</div>
   </div>,
-  <pre key="c" className="code">
+  <pre key="c" className="code" translate="no">
     <span className="c-dim">GET /v1/comparison</span>
     {'\n'}
     {'{'}
@@ -82,11 +82,11 @@ export function Project() {
         <div className="h-track">
           <div className="h-panel intro">
             <h2 className="label">Projeto em destaque</h2>
-            <p className="giant">{PROJECT.title}</p>
+            <p className="giant notranslate" translate="no">{PROJECT.title}</p>
             <p className="role">{PROJECT.tagline}</p>
             <p className="lead">{PROJECT.summary}</p>
             <Magnetic>
-              <a className="btn" href={PROFILE.smartprice} target="_blank" rel="noreferrer">
+              <a className="btn notranslate" translate="no" href={PROFILE.smartprice} target="_blank" rel="noreferrer">
                 {PROJECT.host} <span aria-hidden="true">→</span>
               </a>
             </Magnetic>

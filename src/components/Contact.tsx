@@ -63,7 +63,7 @@ export function Contact() {
         ))}
       </div>
       <footer className="foot">
-        <span>© {new Date().getFullYear()} {PROFILE.name}</span>
+        <span className="notranslate" translate="no">© {new Date().getFullYear()} {PROFILE.name}</span>
         <span>
           {PROFILE.location} · {time}
         </span>
