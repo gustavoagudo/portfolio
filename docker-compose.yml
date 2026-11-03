@@ -1,0 +1,9 @@
+services:
+  portfolio:
+    build: .
+    image: portfolio-web:latest
+    container_name: portfolio_web
+    restart: unless-stopped
+    ports:
+      # Local only, same pattern as the other containers. The host reverse proxy publishes it.
+      - "127.0.0.1:3200:80"
